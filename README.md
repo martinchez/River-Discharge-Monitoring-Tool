@@ -1,3 +1,11 @@
+# Initializing the application
+
+npm install @mui/material @emotion/react @emotion/styled @mui/x-data-grid @mui/icons-material 
+
+react-router-dom@6 react-pro-sidebar formik yup @fullcalender/core @fullcalender/daygrid
+
+@fullcalender/timegrid @fullcalender/list @nivo/line @nivo/pie @nivo/swarmplot @nivo/core @nivo/bar @nevo/geo
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

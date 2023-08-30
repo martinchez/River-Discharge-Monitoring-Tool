@@ -3,10 +3,12 @@
 npm install @mui/material @emotion/react @emotion/styled @mui/x-data-grid @mui/icons-material react-router-dom@6 react-pro-sidebar formik yup @fullcalendar/core @fullcalendar/daygrid @fullcalender/timegrid @fullcalender/list @nivo/line @nivo/pie @nivo/swarmplot @nivo/core @nivo/bar @nivo/geo
 
 # Resourcer link
+
 1. Base theme [https://mui.com/](https://mui.com/)
 2. custom Calaender [https://fullcalendar.io/docs/initialize-es6](https://fullcalendar.io/docs/initialize-es6)
 3. custom charts [https://nivo.rocks/](https://nivo.rocks/)
 
+# Color codes explosion ctrl+k ctrl+g
 
 # Getting Started with Create React App
 

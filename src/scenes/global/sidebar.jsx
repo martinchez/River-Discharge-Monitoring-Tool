@@ -22,7 +22,6 @@ import WaterIcon from '@mui/icons-material/Water'
 import SsidChartIcon from '@mui/icons-material/SsidChart'
 import CastForEducationIcon from '@mui/icons-material/CastForEducation'
 
-
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
@@ -211,7 +210,7 @@ const Sidebar = () => {
             />
             <Item
               title="Map"
-              to="/map"
+              to="/geography"
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

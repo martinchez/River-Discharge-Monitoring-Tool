@@ -137,44 +137,31 @@ const Sidebar = () => {
             >
               Data
             </Typography>
-            <Item
+            {/* <Item
               title="ManageTeam"
               to="/team"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-            <Item
+            /> */}
+            {/* <Item
               title="Contacts"
               to="/contacts"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-            <Item
+            /> */}
+            {/* <Item
               title="Invoices"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-            <Item
-              title="Form"
-              to="/form"
-              icon={<ReceiptOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Calender"
-              to="/calender"
-              icon={<ReceiptOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+            /> */}
+
             <Item
               title="Watersheds"
-              to="/watershed"
+              to="/Watersheds"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -188,30 +175,22 @@ const Sidebar = () => {
             />
             <Item
               title="Abstractions"
-              to="/abstraction"
+              to="/abstractions"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-
             <Item
-              title="Rating Curves"
-              to="/curves"
-              icon={<SsidChartIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Geoportal"
-              to="/portal"
+              title="Data"
+              to="/geoportal"
               icon={<StorageIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Map"
-              to="/geography"
-              icon={<MapOutlinedIcon />}
+              title="Registration Form"
+              to="/abstractors"
+              icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -223,30 +202,9 @@ const Sidebar = () => {
               Charts
             </Typography>
             <Item
-              title="Bar Chart"
-              to="/bar"
-              icon={<BarChartOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Pie Chart"
-              to="/pie"
-              icon={<PieChartOutlineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Line Chart "
-              to="/line"
-              icon={<TimelineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Learning "
-              to="/academy"
-              icon={<CastForEducationIcon />}
+              title="Calender"
+              to="/calender"
+              icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

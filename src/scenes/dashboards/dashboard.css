@@ -1,4 +1,14 @@
-.Full-height-map-container{
-     height: '500px';
-    width: '100%';
+.Full-height-map-container {
+  height: '500px';
+  width: '100%';
+}
+.CardContent {
+  display: flex;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
 }

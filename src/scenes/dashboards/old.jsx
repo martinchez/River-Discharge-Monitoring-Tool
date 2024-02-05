@@ -32,11 +32,9 @@ import './dashboard.css'
 // leaflet
 import 'leaflet/dist/leaflet.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { LineChart, CartesianGrid, XAxis, YAxis } from 'recharts'
+import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts'
 import L from 'leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
-
-import Line from '../line'
 
 // api documentation for the paid Leaflet; https://docs.stadiamaps.com/tutorials/getting-started-with-react-leaflet/
 delete L.Icon.Default.prototype._getIconUrl
@@ -97,11 +95,11 @@ const Dashboard = () => {
   const DagboardCard = ({ color, title1, value, icon }) => (
     <Card variant="outlined" style={{ backgroundColor: color }}>
       <CardContent>
-        <Icon>{icon}</Icon>
+        <Typography>{title1}</Typography>
         <Typography variant="h2" fontWeight="bold" component="div">
           {value}
         </Typography>
-        <Typography>{title1}</Typography>
+        <Icon>{icon}</Icon>
       </CardContent>
     </Card>
   )
@@ -113,63 +111,89 @@ const Dashboard = () => {
       </Box>
       {/* first row */}
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <DagboardCard
-            icon="arrow"
-            color="#29CC39"
-            value="1 345"
-            title1="Deployments"
-          />
+        <Grid item xs={2}>
+          <Card variant="outlined" style={{ backgroundColor: '#29CC39' }}>
+            <CardContent>
+              <Icon>
+                <Code color={colors.greenAccent[100]} />
+              </Icon>
+              <Typography variant="h2" fontWeight="bold" component="div">
+                12
+              </Typography>
+              <Typography>Deployments</Typography>
+            </CardContent>
+          </Card>
         </Grid>
-        <Grid item xs={2} sm={6} md={4} lg={2}>
-          <DagboardCard
-            icon="arrow"
-            color="#83F"
-            value="12 456"
-            title1="Discharge"
-          />
+        <Grid item xs={2}>
+          <Card variant="outlined" style={{ backgroundColor: '#83F' }}>
+            <CardContent>
+              <Icon>
+                <ConfirmationNumberIcon color={colors.greenAccent[100]} />
+              </Icon>
+              <Typography variant="h2" fontWeight="bold" component="div">
+                599
+              </Typography>
+              <Typography>Discharge</Typography>
+            </CardContent>
+          </Card>
         </Grid>
-        <Grid item xs={2} sm={6} md={4} lg={2}>
-          <DagboardCard
-            icon="WaterDropIcon"
-            // <WaterDropIcon color={colors.greenAccent[100]} />
-            color="#F63"
-            value="12 456"
-            title1="Abstractors"
-          />
+        <Grid item xs={2}>
+          <Card variant="outlined" style={{ backgroundColor: '#F63' }}>
+            <CardContent>
+              <Icon>
+                <WaterDropIcon color={colors.greenAccent[100]} />
+              </Icon>
+              <Typography variant="h2" fontWeight="bold" component="div">
+                120
+              </Typography>
+              <Typography>Abstractors</Typography>
+            </CardContent>
+          </Card>
         </Grid>
-        <Grid item xs={2} sm={6} md={4} lg={2}>
-          <DagboardCard
-            icon="People"
-            // <People color={colors.greenAccent[100]} />
-            color="#33BFFF"
-            value="6 875"
-            title1="Users"
-          />
+        <Grid item xs={2}>
+          <Card variant="outlined" style={{ backgroundColor: '#33BFFF' }}>
+            <CardContent>
+              <Icon>
+                <People color={colors.greenAccent[100]} />
+              </Icon>
+              <Typography variant="h2" fontWeight="bold" component="div">
+                6875
+              </Typography>
+              <Typography>Users</Typography>
+            </CardContent>
+          </Card>
         </Grid>
-        <Grid item xs={2} sm={6} md={4} lg={2}>
-          <DagboardCard
-            icon="Datasets"
-            // <People color={colors.greenAccent[100]} />
-            color="#1A2233"
-            value="10 875"
-            title1="Datasets"
-          />
+        <Grid item xs={2}>
+          <Card variant="outlined" style={{ backgroundColor: '#1A2233' }}>
+            <CardContent>
+              <Icon>
+                <People color={colors.greenAccent[100]} />
+              </Icon>
+              <Typography variant="h2" fontWeight="bold" component="div">
+                6875
+              </Typography>
+              <Typography>Datasets</Typography>
+            </CardContent>
+          </Card>
         </Grid>
-        <Grid item xs={2} sm={6} md={4} lg={2}>
-          <DagboardCard
-            icon="hrus"
-            // <People color={colors.greenAccent[100]} />
-            color="orange "
-            value="10 875"
-            title1="HRUS"
-          />
+        <Grid item xs={2}>
+          <Card variant="outlined" style={{ backgroundColor: '#FFF' }}>
+            <CardContent>
+              <Icon>
+                <People color={colors.greenAccent[100]} />
+              </Icon>
+              <Typography variant="h2" fontWeight="bold" component="div">
+                6875
+              </Typography>
+              <Typography>Users</Typography>
+            </CardContent>
+          </Card>
         </Grid>
       </Grid>
       {/* second row */}
       <Grid container style={{ marginTop: '20px' }}>
         {/* Map column */}
-        <Grid item xs={8}>
+        <Grid item xs={12}>
           <MapContainer
             center={[51.505, -0.09]}
             zoom={13}
@@ -183,13 +207,6 @@ const Dashboard = () => {
               <Popup>A sample popup.</Popup>
             </Marker>
           </MapContainer>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          style={{ height: '500px', overflowY: 'hidden', width: '100%' }}
-        >
-          <Line />
         </Grid>
       </Grid>
       <Grid>
